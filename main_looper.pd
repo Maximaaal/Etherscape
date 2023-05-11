@@ -1,0 +1,83 @@
+#N canvas 61 234 1278 825 12;
+#X obj 241 211 tgl 15 0 empty empty INPUT\ ENABLE/DISABLE 17 7 0 10
+#fcfcfc #000000 #000000 0 1;
+#X floatatom 691 211 5 -3.40282e+38 3.40282e+38 0 - - - 0;
+#X obj 297 374 looper~ 500;
+#X obj 693 179 hsl 162 19 100 800 0 0 empty empty DELAY\ SPEED -2 -10
+0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 271 628 hsl 162 19 0 20000 0 0 empty empty CUTOFF\ HZ -2 -10
+1 12 #fcfcfc #000000 #000000 0 1;
+#X obj 676 615 hsl 162 19 0.012 1.2 1 1 empty empty FEEDBACK\  -2 -10
+1 12 #fcfcfc #000000 #000000 10325 1;
+#X obj 659 374 looper~ 1000;
+#X obj 627 541 osc~ 10;
+#X obj 587 615 *~;
+#X obj 824 342 vsl 19 162 1 20 0 0 empty empty GATE-ish\ HZ 0 -9 0
+12 #fcfcfc #000000 #000000 0 1;
+#X floatatom 677 653 5 -3.40282e+38 3.40282e+38 0 - - - 0;
+#X floatatom 279 660 13 -3.40282e+38 3.40282e+38 0 - - - 0;
+#X floatatom 824 526 5 -3.40282e+38 3.40282e+38 0 - - - 0;
+#X obj 368 334 * 2;
+#X obj 219 168 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc
+#000000 #000000;
+#X obj 279 529 loadbang;
+#X obj 692 546 loadbang;
+#X msg 693 578 1;
+#X obj 627 564 *~ 0.5;
+#X obj 620 116 loadbang;
+#X msg 621 148 500;
+#X obj 163 122 inlet;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X text 0 0 plugdatainfo <?xml version="1.0" encoding="UTF-8"?> <PlugDataInfo/>
+;
+#X coords 0 1 100 -1 1 1 1;
+#X restore 0 0 graph;
+#X obj 494 134 inlet~;
+#X obj 470 745 outlet~;
+#X obj 835 94 inlet;
+#X obj 781 122 nbx 4 21 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#e4e4e4 #5a5a5a #5a5a5a 0 256;
+#X obj 909 560 random 700;
+#X obj 909 619 / 1000;
+#X obj 900 677 + 0.2;
+#X obj 909 588 + 1;
+#X msg 342 157 0;
+#X msg 279 578 10000;
+#X connect 0 0 6 2;
+#X connect 0 0 2 2;
+#X connect 1 0 6 1;
+#X connect 1 0 13 0;
+#X connect 2 0 24 0;
+#X connect 3 0 1 0;
+#X connect 4 0 11 0;
+#X connect 4 0 6 4;
+#X connect 4 0 2 4;
+#X connect 5 0 10 0;
+#X connect 5 0 6 3;
+#X connect 5 0 2 3;
+#X connect 6 0 8 0;
+#X connect 7 0 18 0;
+#X connect 8 0 24 0;
+#X connect 9 0 7 0;
+#X connect 9 0 12 0;
+#X connect 13 0 2 1;
+#X connect 14 0 0 0;
+#X connect 15 0 32 0;
+#X connect 16 0 17 0;
+#X connect 17 0 5 0;
+#X connect 18 0 8 1;
+#X connect 19 0 20 0;
+#X connect 19 0 31 0;
+#X connect 20 0 3 0;
+#X connect 21 0 14 0;
+#X connect 21 0 27 0;
+#X connect 23 0 6 0;
+#X connect 23 0 2 0;
+#X connect 25 0 26 0;
+#X connect 26 0 3 0;
+#X connect 27 0 30 0;
+#X connect 28 0 29 0;
+#X connect 29 0 5 0;
+#X connect 30 0 28 0;
+#X connect 31 0 0 0;
+#X connect 32 0 4 0;
